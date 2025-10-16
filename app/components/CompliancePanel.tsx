@@ -1,9 +1,9 @@
-"use client";
+﻿"use client";
 
 const alerts = [
   { id: "C-9811", text: "DEA license expiring in 12 days (Dr. Bob Johnson)", level: "Warn", ts: "Today 09:14" },
   { id: "C-9810", text: "OIG exclusion list re-check completed (All Florida providers)", level: "OK", ts: "Today 08:03" },
-  { id: "C-9802", text: "Malpractice policy missing — needs upload (Dr. Chen Liu)", level: "Flag", ts: "Yesterday 17:22" },
+  { id: "C-9802", text: "Malpractice policy missing â€” needs upload (Dr. Chen Liu)", level: "Flag", ts: "Yesterday 17:22" },
 ];
 
 export default function CompliancePanel(){
@@ -21,7 +21,7 @@ export default function CompliancePanel(){
             <span className={`chip ${shade(a.level)}`}>{a.level}</span>
             <div className="flex-1">
               <div className="text-sm">{a.text}</div>
-              <div className="text-xs text-gray-500 mt-1">{a.ts} • {a.id}</div>
+              <div className="text-xs text-gray-500 mt-1">{a.ts} â€¢ {a.id}</div>
             </div>
           </li>
         ))}
@@ -29,3 +29,5 @@ export default function CompliancePanel(){
     </section>
   );
 }
+
+

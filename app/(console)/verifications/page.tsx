@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useMemo, useState } from "react";
 import { useProviders } from "../../lib/useProviders";
 import { Card, Table, Space, Button, Upload, message, Typography, Tag } from "antd";
@@ -16,7 +16,7 @@ export default function VerificationsPage(){
 
   const runChecks = async (rec: Provider) => {
     setSpinning(rec.id);
-    // Simulate async “background checks” (OIG, DEA, Board)
+    // Simulate async â€œbackground checksâ€ (OIG, DEA, Board)
     await new Promise(r => setTimeout(r, 900));
     // 70% pass, 30% flag
     const next: Status = Math.random() < 0.7 ? "Verified" : "Flagged";
@@ -61,3 +61,8 @@ export default function VerificationsPage(){
     </div>
   );
 }
+
+
+
+
+

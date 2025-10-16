@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useMemo, useState } from "react";
 import { useProviders } from "../../lib/useProviders";
 import {
@@ -114,7 +114,7 @@ export default function ProvidersPage(){
       <Card
         className="mt-3"
         extra={<Space wrap>
-          <Input allowClear prefix={<SearchOutlined/>} placeholder="Search name, ID, dept…" style={{width:240}} onChange={e=>setQ(e.target.value)} />
+          <Input allowClear prefix={<SearchOutlined/>} placeholder="Search name, ID, deptâ€¦" style={{width:240}} onChange={e=>setQ(e.target.value)} />
           <Select value={status} onChange={v=>setStatus(v)} style={{width:160}} options={[
             {value:"All",label:"All statuses"},{value:"Pending",label:"Pending"},
             {value:"Verified",label:"Verified"},{value:"Flagged",label:"Flagged"}
@@ -156,3 +156,8 @@ export default function ProvidersPage(){
     </div>
   );
 }
+
+
+
+
+

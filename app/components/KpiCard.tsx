@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -38,3 +38,5 @@ export default function KpiCard({ label, value, delta, tone = "info", spark = []
     </motion.div>
   );
 }
+
+

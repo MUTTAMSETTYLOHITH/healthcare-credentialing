@@ -39,25 +39,25 @@ export default function AnalyticsPage() {
       {/* KPI row */}
       <Row gutter={[16, 16]} className="mt-2">
         <Col xs={24} md={6}>
-          <Card variant="filled" className="card-soft kpi">
+          <Card variant="borderless" className="card-soft kpi">
             <Statistic title="Pass Rate" value="98.6%" />
             <Text type="secondary">+0.4% WoW</Text>
           </Card>
         </Col>
         <Col xs={24} md={6}>
-          <Card variant="filled" className="card-soft kpi">
+          <Card variant="borderless" className="card-soft kpi">
             <Statistic title="Verifications / Day" value={1284} />
             <Text type="secondary">peak Thu</Text>
           </Card>
         </Col>
         <Col xs={24} md={6}>
-          <Card variant="filled" className="card-soft kpi">
+          <Card variant="borderless" className="card-soft kpi">
             <Statistic title="Avg. Docs per Provider" value={6.2} />
             <Text type="secondary">target &lt;= 7</Text>
           </Card>
         </Col>
         <Col xs={24} md={6}>
-          <Card variant="filled" className="card-soft kpi">
+          <Card variant="borderless" className="card-soft kpi">
             <Statistic title="SLA &lt;= 4h Compliance" value="94.2%" />
             <Text type="secondary">-0.3% WoW</Text>
           </Card>
@@ -67,7 +67,7 @@ export default function AnalyticsPage() {
       <Row gutter={[16, 16]} className="mt-2">
         {/* Throughput line/area */}
         <Col xs={24} md={14}>
-          <Card title="Verification Throughput (last 7 days)" variant="filled" className="card-soft">
+          <Card title="Verification Throughput (last 7 days)" variant="borderless" className="card-soft">
             <div style={{ height: 280 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={throughput} margin={{ top: 10, right: 10, bottom: 0, left: -10 }}>
@@ -91,7 +91,7 @@ export default function AnalyticsPage() {
 
         {/* Compliance stacked bars */}
         <Col xs={24} md={10}>
-          <Card title="Compliance Mix by Department" variant="filled" className="card-soft">
+          <Card title="Compliance Mix by Department" variant="borderless" className="card-soft">
             <div style={{ height: 280 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={compliance} margin={{ top: 10, right: 10, bottom: 0, left: -15 }}>
@@ -113,3 +113,8 @@ export default function AnalyticsPage() {
     </div>
   );
 }
+
+
+
+
+

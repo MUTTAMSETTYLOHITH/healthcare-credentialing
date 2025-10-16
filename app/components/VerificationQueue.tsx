@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useMemo, useState } from "react";
 import { CheckCircleIcon, ClockIcon, ExclamationTriangleIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
@@ -77,7 +77,7 @@ export default function VerificationQueue({ onOpen }: { onOpen: (row: Row)=>void
           ))}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-2 w-full md:w-auto">
-          <input className="input" placeholder="Search name, ID, dept…" value={q} onChange={e=>{ setQ(e.target.value); setPage(1); }} />
+          <input className="input" placeholder="Search name, ID, deptâ€¦" value={q} onChange={e=>{ setQ(e.target.value); setPage(1); }} />
           <select className="input" value={status} onChange={e=>{ setStatus(e.target.value as any); setPage(1); }}>
             {["All","Pending","Verified","Flagged"].map(s=><option key={s}>{s}</option>)}
           </select>
@@ -136,3 +136,5 @@ export default function VerificationQueue({ onOpen }: { onOpen: (row: Row)=>void
     </section>
   );
 }
+
+

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import "./globals.css";
 
 import "antd/dist/reset.css";
@@ -32,3 +32,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+

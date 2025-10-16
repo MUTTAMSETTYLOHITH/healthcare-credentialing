@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Fragment } from "react";
 import { Transition } from "framer-motion";
 import { XMarkIcon } from "@heroicons/react/24/solid";
@@ -72,3 +72,5 @@ export default function ProviderDrawer({ open, onClose, data }: Props){
     </div>
   );
 }
+
+

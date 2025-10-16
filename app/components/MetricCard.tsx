@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { motion } from "framer-motion";
 
 export default function MetricCard({
@@ -23,3 +23,5 @@ export default function MetricCard({
     </motion.div>
   );
 }
+
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useEffect, useState } from "react";
 import { Card, Switch, Typography, Space, Divider, Button, message } from "antd";
 const { Title, Text } = Typography;
@@ -58,3 +58,8 @@ export default function SettingsPage(){
     </div>
   );
 }
+
+
+
+
+
