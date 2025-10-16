@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1e3a8a;      /* deep hospital blue */
+  --accent: #2563eb;       /* link/action blue */
+  --bg: #f9fafb;           /* soft background */
+  --card: #ffffff;
+}
+
+body {
+  background-color: var(--bg);
+  color: #1e293b;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
