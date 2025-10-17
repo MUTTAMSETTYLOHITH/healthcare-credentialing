@@ -5,9 +5,9 @@ import "../globals.css";
 export default function ConsoleLayout({ children }: { children: React.ReactNode }) {
   // Two-column grid: sidebar + main
   return (
-    <div className="grid grid-cols-[24rem_1fr] min-h-screen bg-[#0b1430]">
+    <div className="grid grid grid-cols-[24rem_1fr] min-h-screen bg-[#0b1430]">
       <Sidebar />
-      <main className="bg-[#f6f8fb]">
+      <main className="bg-[#f6f8fb] bg-[#f6f8fb]">
         <div className="topbar">
           <div className="topbar-inner">
             <span className="topbar-title">Credentialing</span>
@@ -18,3 +18,4 @@ export default function ConsoleLayout({ children }: { children: React.ReactNode 
     </div>
   );
 }
+

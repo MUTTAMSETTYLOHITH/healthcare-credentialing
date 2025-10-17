@@ -18,8 +18,7 @@ const items = [
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const selected =
-    items.find(i => pathname === i.key || (i.key !== "/" && pathname.startsWith(i.key)))?.key ?? "/";
+  const selected = items.find(i => pathname === i.key || (i.key !== "/" && pathname.startsWith(i.key)))?.key ?? "/";
 
   return (
     <Sider
@@ -29,8 +28,11 @@ export default function Sidebar() {
         position: "sticky",
         top: 0,
         height: "100dvh",
-        zIndex: 10, // sits above main scroll area but below modals
+        // keep the sidebar below popovers, above main background
+        zIndex: 5,
         background: "linear-gradient(180deg,#0b1840,#0b1430)",
+        // avoid accidental extra width
+        boxSizing: "border-box",
       }}
       className="w-[24rem]"
     >
@@ -38,9 +40,7 @@ export default function Sidebar() {
         <div style={{ display: "flex", alignItems: "center", gap: 10, color: "#fff", fontSize: 22, fontWeight: 700 }}>
           <span role="img" aria-label="logo">🩺</span> HealthCred
         </div>
-        <Text style={{ color: "rgba(255,255,255,.6)", fontSize: 12 }}>
-          Enterprise Credentialing Console
-        </Text>
+        <Text style={{ color: "rgba(255,255,255,.6)", fontSize: 12 }}>Enterprise Credentialing Console</Text>
       </div>
 
       <Menu
@@ -55,15 +55,11 @@ export default function Sidebar() {
         style={{ padding: 12, background: "transparent" }}
       />
 
-      <div style={{
-        marginTop: "auto",
-        padding: 16,
-        color: "rgba(255,255,255,.6)",
-        fontSize: 12,
-        borderTop: "1px solid rgba(255,255,255,.12)"
-      }}>
+      <div style={{ marginTop: "auto", padding: 16, color: "rgba(255,255,255,.6)", fontSize: 12, borderTop: "1px solid rgba(255,255,255,.12)" }}>
         v3.2 • Secure Cloud • Audit On
       </div>
     </Sider>
   );
 }
+
+
